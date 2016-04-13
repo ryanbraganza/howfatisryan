@@ -10,7 +10,7 @@ end
 get '/' do
   # TODO cache response
   page = Nokogiri::HTML(open("https://www.fitbit.com/user/25BHT6/weight"))   
-  weight = page.css('#weight').text
+  weight = page.css('#curWeight').text
 
   <<-EOS
     <!doctype html>
